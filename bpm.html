@@ -1,0 +1,186 @@
+<html>
+<body>
+	<style>
+		#button 
+		{
+			float: left;
+			width: 300px;
+			height: 300px;
+			border: 1px solid #555;
+			cursor: pointer;
+			background-color: #0F0;
+		}
+		
+		#button-text
+		{
+			position: relative;
+			left: 120px;
+			top: 130px;
+			font-size: 18pt;
+			font-weight: bold;
+		}
+		
+		#bpm, #avg
+		{
+			float: left;
+			margin-left: 10px;
+			border: 1px solid #555;
+			width: 150px;
+			height: 296px;
+			overflow: scroll;
+			padding: 2px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		var startTicks = 0;
+		var isTiming = false;
+		var elapsed = 0;
+		var allBpms = new Array();
+		
+		function getAverage()
+		{		
+			var total = 0;
+			for ( var i in allBpms )
+			{
+				total += allBpms[i];
+			}
+			return total / Math.max(allBpms.length, 1);
+		}
+		
+		function updateBpm()
+		{
+			if ( !elapsed )
+			{
+				return;
+			}
+			
+			var e = document.getElementById("measure-length");
+			var measureLength = e.options[e.selectedIndex].value;
+			var bpm = Math.round(60000 / elapsed) * measureLength;
+			
+			e = document.getElementById("window-size");
+			var windowSize = e.options[e.selectedIndex].value;
+			allBpms.push(bpm);
+			while ( allBpms.length > windowSize )
+			{
+				allBpms.shift();
+			}
+			
+			var currentHtml = document.getElementById('bpm').innerHTML;
+			document.getElementById('bpm').innerHTML = 
+				"BPM: " + bpm + "<br>" +
+				currentHtml
+			;
+			
+			currentHtml = document.getElementById('avg').innerHTML;
+			document.getElementById('avg').innerHTML = 
+				"Avg: " + Math.round(getAverage()) + "<br>" + 
+				currentHtml
+			;
+		}
+		
+		function recordBpm()
+		{
+			elapsed = Date.now() - startTicks;
+			startTicks = Date.now();
+			updateBpm();
+		}
+		
+		function startTimer()
+		{
+			startTicks = Date.now();
+			isTiming = true;
+			document.getElementById('button').style.backgroundColor = "#F00";
+		}
+		
+		function stopTimer()
+		{
+			recordBpm();
+			isTiming = false;
+			document.getElementById('button').style.backgroundColor = "#0F0";
+		}
+		
+		function handleKey()
+		{
+			if ( isTiming && document.getElementById('continuous').checked )
+			{
+				recordBpm();
+			}
+			else
+			{
+				toggleTimer();
+			}
+		}
+		
+		function toggleTimer()
+		{
+			if ( isTiming )
+			{
+				document.getElementById('button-text').innerHTML = "Start";
+				stopTimer();
+			}
+			else
+			{
+				document.getElementById('button-text').innerHTML = "Stop";
+				startTimer();
+			}
+		}
+		
+		function clearHistory()
+		{
+			document.getElementById('bpm').innerHTML = '';
+			document.getElementById('avg').innerHTML = '';
+			allBpms = new Array();
+		}
+
+		if ( document.addEventListener )
+		{
+		   document.addEventListener("keypress", handleKey, false);
+		}
+		else if ( document.attachEvent )
+		{
+		   document.attachEvent("onkeypress", handleKey);
+		}
+	</script>
+</body>
+
+Beats per measure:
+<select id="measure-length" size="1" onChange="updateBpm();">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4" selected>4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Avg window:
+<select id="window-size" size="1" onChange="updateBpm();">
+	<option value="5">5</option>
+	<option value="10" selected>10</option>
+	<option value="15">15</option>
+	<option value="20">20</option>
+	<option value="50">50</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="button" value="Clear" onClick="clearHistory(); return false;">
+
+<br>
+<br>
+
+<input id="continuous" type="checkbox" value="on" checked>Continuous Key Presses
+
+<br>
+<br>
+<div id="button" onClick="toggleTimer(); return false;"><div id="button-text">Start</div></div>
+<div id="bpm"></div>
+<div id="avg"></div>
+</body>
+</html>
