@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+        
+ <title>Olive Garden Dish Name Generator</title>
+<meta name="description" content="Olive Garden Food Name Generator" />
+<meta name="keywords" content="food, italian, italian food, olive garden, humor, random, pizza, pasta, salad, breadsticks" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+body
+{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+table
+{
+	width: 800px;
+}
+
+td
+{
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+#meal
+{
+    font-size: 125%;
+    color: #F00;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button
+{
+    border: 2px solid black;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+    background-color: #CCC;
+    font-weight: bold;
+}
+
+.at-bottom
+{
+    text-align: center;
+    font-size: 50%;
+    font-style: italic;
+}
+</style>
+
+</head>
+
+<script type="text/javascript">
+
+var adjectives = [
+"Creamy",
+"Stuffed",
+"Tuscan",
+"Sicilian",
+"Roma",
+"Genoa",
+"Four Cheese"
+];
+
+var mains = [
+"Chicken", 
+"Bistecca", 
+"Shrimp", 
+"Veal",
+"Pesce",
+"Pasta",
+"Risotto"
+];
+
+var bsPrefixes = [
+"Fut",
+"Pamb",
+"Brut",
+"Aman",
+"Put",
+"Pais",
+"Brev",
+"Tant",
+"Stratt"
+];
+
+var bsSuffixes = [
+"esco",
+"lanco",
+"ano",
+"lana",
+"oni",
+"e",
+"a",
+"o"
+];
+
+var bsPastaPrefixes = [
+"Tagg",
+"Scamp",
+"Cat",
+"Cacc"
+];
+
+var bsPastaSuffixes = [
+"lioni",
+"atoni",
+"atella",
+"ini"
+];
+
+var suffixes = [
+"Portofino",
+"Scampi",
+"di Mare",
+"Fritta",
+"Fonduta",
+"e Fagioli",
+"Toscana",
+"Alfredo",
+"Classico",
+"al Forno",
+"alla Marinara",
+"Parmigiana",
+"Pomodoro",
+"de Italia",
+"di Portobello",
+"Marsala",
+"Carbonara",
+"Primavera",
+"Caprese",
+"Romana",
+"Brodetto"
+];
+
+function rand(from, to) {
+    return Math.round(to * Math.random()) + from;
+}
+
+function count(a) {
+    return a.length;
+}
+
+var fakeFood = '';
+if ( rand(0, 5) == 0 )
+{
+    fakeFood = fakeFood + adjectives[rand(0, count(adjectives) - 1)] + " ";
+}
+
+if ( rand(0, 4) == 0 )
+{
+    fakeFood = fakeFood + bsPastaPrefixes[rand(0, count(bsPastaPrefixes) - 1)] + bsPastaSuffixes[rand(0, count(bsPastaSuffixes) - 1)] + " ";
+}
+else
+{
+    fakeFood = fakeFood + mains[rand(0, count(mains) - 1)] + " ";
+}
+fakeFood = fakeFood + suffixes[rand(0, count(suffixes) - 1)] + " ";
+fakeFood = fakeFood + bsPrefixes[rand(0, count(bsPrefixes) - 1)] + bsSuffixes[rand(0, count(bsSuffixes) - 1)];
+
+$(function(){
+    $('#meal').text(fakeFood);
+});
+
+</script>
+
+<body>
+
+<h3>Olive Garden Dish Name Generator</h3>
+
+<div>
+Today's Meal:<br><br>
+<span id="meal"></span><br><br>
+Of course, with unlimited salad and breadsticks.
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div>
+<span class="button" onClick="window.location.href=window.location.href">Try Another</span>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div>
+<center>
+<table>
+<tr><td>
+Does it bother you that there is a restaurant that purports to be Italian but really has nothing to do with Italian food? Me too.
+I was watching one of their commercials and thought, "these are just made up foods. I can do better." Thus, this website.
+</td></tr>
+<tr><td>
+<p>&nbsp;</p>
+Interested in real Italian Food? Here are some great links:
+<li><a href="http://www.italianfoodforever.com/">Italian Food Forever</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Italian_cuisine">Wikipedia on Italian Food</a></li>
+<li><a href="http://www.lifeinitaly.com/food">Life in Italy - Food</a></li>
+</td></tr>
+<tr><td>
+<p>&nbsp;</p>
+Want to know the names of some <i>real</i> Italian Food dishes?<br>
+<li>Bruschetta</li>
+<li>Minestrone</li>
+<li>Cappellini</li>
+<li>Spaghetti</li>
+<li>Osso buco</li>
+<li>Lasagna</li>
+<li>Pizza</li>
+<li>Fettuccine Alfredo</li>
+<li>Bruschetta</li>
+<li>Ossobuco</li>
+<li>Pollo alla cacciatora</li>
+</td></tr>
+</table>
+
+<p>
+Sound familiar? If a food doesn't sound familiar and you're at the Olive Garden, it's probably made up.
+</p>
+
+</center>
+</div>
+
+<div class="at-bottom">
+Copyright 2012 by Jordan Zimmerman - Not affiliated with Olive Garden or Darden Concepts, Inc.
+</div>
+
+</body>
+</html>
+
+
