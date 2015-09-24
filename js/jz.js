@@ -20,7 +20,8 @@ var items = [
     new item('http://curator.apache.org', 'curator.png', 150, 56, 'Apache Curator'),
     new item('http://nirmataoss.github.io/workflow', 'nirmata.jpg', 100, 100, 'Nirmata Workflow'),
     new item('http://soabase.io', 'soabase.png', 125, 125, 'Soabase'),
-    new item('http://www.google.com/patents/US7197475', 'patent.png', 125, 156, 'US Patent 7197475'),
+    new item('http://soabase.io', 'soabase.png', 125, 125, 'Soabase'),
+    new item('https://rule1.quora.com', 'Quora-Logo-EPS-vector-image.png', 170, 113, 'Quora'),
     new item('olivegarden.html', 'olivegarden.jpg', 151, 115, 'Olive Garden Dish Name Generator'),
 ];
 
