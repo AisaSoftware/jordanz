@@ -17,7 +17,7 @@ var items = [
     new item('https://www.facebook.com/bobby.zimmerman.716', 'doodles.jpg', 170, 128, 'Bobby Doodle'),
     new item('https://soundcloud.com/jordanzimmerman', 'sc_st_gradient_152x96.png', 152, 96, 'SoundCloud'),
     new item('http://aisallc.com', 'aisascaled.png', 165, 147, 'Aisa Software'),
-    new item(null, null, 0, 0, null, 'mail'),
+    new item(null, null, 0, 0, 'Email', 'email'),
     new item('http://curator.apache.org', 'curator.png', 150, 56, 'Apache Curator'),
     new item('http://nirmataoss.github.io/workflow', 'nirmata.jpg', 100, 100, 'Nirmata Workflow'),
     new item('http://soabase.io', 'soabase.png', 125, 125, 'Soabase'),
@@ -40,12 +40,15 @@ function buildItems() {
         }
 
         content = content + '<div class="' + ROW_CLASS + '">\n';
-        if ( item.special === 'mail' ) {
-            content = content + '<a id="jzenvelope-a" href="#" class="jzthumb thumbnail"><span id="jzenvelope" class="glyphicon glyphicon-envelope"></span></a>\n';
+        var tooltipAlign = (i < ITEMS_PER_ROW) ? 'bottom' : 'top';
+        var tooltip = 'data-toggle="tooltip" data-placement="' + tooltipAlign + '" title="' + item.alt + '"';
+        var link = '';
+        if ( item.special === 'email' ) {
+            link = '<a ' + tooltip + ' id="jzenvelope-a" href="#" class="jzthumb thumbnail"><span id="jzenvelope" class="glyphicon glyphicon-envelope"></span></a>\n';
         } else {
-            content = content + '<a href="' + item.url + '" class="jzthumb thumbnail"><img src="assets/' + item.image + '" width="' + item.imageWidth + '" height="' + item.imageHeight + '" alt="' + item.alt + '"></a>\n';
+            link = '<a ' + tooltip + ' href="' + item.url + '" class="jzthumb thumbnail"><img src="assets/' + item.image + '" width="' + item.imageWidth + '" height="' + item.imageHeight + '" alt="' + item.alt + '"></a>\n';
         }
-        content = content + '</div>\n';
+        content = content + link + '</div>\n';
 
         if ( (((index + 1) % ITEMS_PER_ROW) == 0) || ((index + 1) == items.length))  {
             content = content + '</div>\n';
@@ -62,5 +65,7 @@ $(function(){
     m2 = m2 + 'to:';
     m2 = m2 + 'jordan';
     m2 = m2 + '@jordanzimmerman.com';
-    $('#jzenvelope-a').attr('href', m2);    
+    $('#jzenvelope-a').attr('href', m2);   
+    
+     $("[data-toggle='tooltip']").tooltip();  
 });
