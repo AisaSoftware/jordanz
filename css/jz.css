@@ -5,6 +5,14 @@ body {
     width: 100%;
 }
 
+#jzpic-container {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: 100px;
+    height: 136px;
+}
+
 #jzpage {
     position: fixed;
     top: 5%;
