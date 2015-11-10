@@ -28,6 +28,8 @@ var items = [
     new item('https://aisa.quora.com', 'Quora-aisa.png', 170, 113, 'Quora - A is A'),
     new item('http://www.google.com/patents/US7197475', 'patent.png', 125, 156, 'US Patent 7197475'),
     new item('http://hadoopmag.com/curator-and-exhibitor-a-better-way-to-use-and-manage-apache-zookeeper/', 'sdj.png', 160, 39, 'Curator and Exhibitor: A better way to use and manage Apache ZooKeeper'),
+    new item('https://blog.cloudera.com/blog/2013/05/zookeeper-made-simpler/', 'cloudera-logo.png', 160, 30, "Cloudera Blog - Apache ZooKeeper Made Simpler with Curator "),
+    new item('http://www.amazon.com/J2EE-Technology-Practice-Applications-Enterprise/dp/0201746220', 'j2ee_book.jpg', 95, 119, "J2EE Technology in Practice"),
     new item('https://www.facebook.com/jordan.zimmerman.drummer?ref=bookmarks', 'drums.jpg', 140, 165, "I'm a drummer too!"),
     new item('olivegarden.html', 'olivegarden.jpg', 151, 115, 'Olive Garden Dish Name Generator'),
 ];
