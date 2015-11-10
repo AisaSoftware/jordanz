@@ -22,6 +22,8 @@ var items = [
     new item('http://nirmataoss.github.io/workflow', 'nirmata.jpg', 100, 100, 'Nirmata Workflow'),
     new item('http://soabase.io', 'soabase.png', 125, 125, 'Soabase'),
     new item('http://stackoverflow.com/users/2048051/randgalt', 'stackoverflow.png', 158, 158, 'Stack Overflow'),
+    new item('http://www.ubica.global', 'ubica.png', 168, 100, 'Ubica'),
+    new item('http://nirmata.com/company/team/', 'nirmata-title.jpg', 164, 88, 'Nirmata'),
     new item('https://rule1.quora.com', 'Quora-rule1.png', 170, 113, 'Quora - Rule 1'),
     new item('https://aisa.quora.com', 'Quora-aisa.png', 170, 113, 'Quora - A is A'),
     new item('http://www.google.com/patents/US7197475', 'patent.png', 125, 156, 'US Patent 7197475'),
