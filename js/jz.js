@@ -45,7 +45,7 @@ function buildItems() {
         }
 
         content = content + '<div class="' + ROW_CLASS + '">\n';
-        var tooltipAlign = (i < ITEMS_PER_ROW) ? 'bottom' : 'top';
+        var tooltipAlign = (i < (2 * ITEMS_PER_ROW)) ? 'bottom' : 'top';
         var tooltip = 'data-toggle="tooltip" data-placement="' + tooltipAlign + '" title="' + item.alt + '"';
         var link = '';
         if ( item.special === 'email' ) {
