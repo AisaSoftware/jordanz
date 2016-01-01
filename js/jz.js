@@ -63,8 +63,22 @@ function buildItems() {
     $('#items').html(content);
 }
 
+function setBio() {
+    var highlights = ['Jordan Zimmerman', 'distributed systems', 'cloud', 'Netflix', 'Aisa Software Consulting', 'Apache Curator', 'open source', "Software Developer's Journal", 'Cloudera Blog', 'Addison-Wesley book'];
+    
+    jQuery.get('bio.txt', function(data){
+        var text = data;
+        for ( var i in highlights ) {
+            var s = highlights[i];
+            text = text.replace(s, '<strong>' + s + "</strong>");
+        }
+        $('#jzbio').html(text);
+    })
+}
+
 $(function(){
     buildItems();
+    setBio();
 
     var m2 = 'mail';
     $('#copyright').text(new Date().getFullYear());
