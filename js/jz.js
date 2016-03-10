@@ -14,7 +14,6 @@ var items = [
     new item('https://www.twitter.com/randgalt', 'TwitterLogo_55acee.png', 166, 166, 'Twitter'),
     new item('http://www.slideshare.net/randgalt', 'SS_Logo_Desktop_Black.png', 128, 34, 'Slideshare'),
     new item('https://www.facebook.com/ritahkan', 'rita.png', 101, 136, 'Rita Kan'),
-    new item('https://www.facebook.com/bobby.zimmerman.716', 'doodles.jpg', 170, 128, 'Bobby Doodle'),
     new item('https://soundcloud.com/jordanzimmerman', 'sc_st_gradient_152x96.png', 152, 96, 'SoundCloud'),
     new item('http://aisallc.com', 'aisascaled.png', 165, 147, 'Aisa Software'),
     new item(null, null, 0, 0, 'Email', 'email'),
