@@ -17,6 +17,7 @@ var items = [
     new item('http://aisallc.com', 'aisascaled.png', 165, 147, 'Aisa Software'),
     new item(null, null, 0, 0, 'Email', 'email'),
     new item('http://curator.apache.org', 'curator.png', 150, 56, 'Apache Curator'),
+    new item('https://github.com/soabase/soabase-halva/blob/master/README.md', 'bean.png', 150, 150, 'Soabase Halva'),
     new item('http://nirmataoss.github.io/workflow', 'nirmata.jpg', 100, 100, 'Nirmata Workflow'),
     new item('http://soabase.io', 'soabase.png', 125, 125, 'Soabase'),
     new item('http://stackoverflow.com/users/2048051/randgalt', 'stackoverflow.png', 158, 158, 'Stack Overflow'),
