@@ -9,14 +9,14 @@ function runGame() {
     var firstGuessIsRight = (guessDoor === prizeDoor);
     
     var willSwitch = Math.round(2 * Math.random());
-    if ( willSwitch ) {
-        if ( firstGuessIsRight ) {
+    if ( firstGuessIsRight ) {
+        if ( willSwitch ) {
             ++wouldLoseIfSwitch;
         } else {
             ++wouldWinIfSwitch;
         }
     } else {
-        if ( firstGuessIsRight ) {
+        if ( willSwitch ) {
             ++wouldWinIfSwitch;
         } else {
             ++wouldLoseIfSwitch;
