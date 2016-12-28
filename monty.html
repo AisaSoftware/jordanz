@@ -1,0 +1,82 @@
+<html>
+<script type="text/javascript">
+var wouldWinIfSwitch = 0;
+var wouldLoseIfSwitch = 0;
+var gameQty = 0;
+function runGame() {
+    var prizeDoor = Math.round(3 * Math.random());
+    var guessDoor = Math.round(3 * Math.random());
+    var firstGuessIsRight = (guessDoor === prizeDoor);
+    
+    var willSwitch = Math.round(2 * Math.random());
+    if ( willSwitch ) {
+        if ( firstGuessIsRight ) {
+            ++wouldLoseIfSwitch;
+        } else {
+            ++wouldWinIfSwitch;
+        }
+    } else {
+        if ( firstGuessIsRight ) {
+            ++wouldWinIfSwitch;
+        } else {
+            ++wouldLoseIfSwitch;
+        }
+    }
+    
+    ++gameQty;
+}
+
+var CELL_WIDTH = 400;
+function updateUi() {
+    var wouldWinIfSwitchPercent = wouldWinIfSwitch / gameQty;
+    var wouldLoseIfSwitchPercent = wouldLoseIfSwitch / gameQty;
+    
+    var switchingWinsWidth = Math.round(CELL_WIDTH * wouldWinIfSwitchPercent);
+    var switchingLosesWidth = Math.round(CELL_WIDTH * wouldLoseIfSwitchPercent);
+    
+    document.getElementById('switching-wins-left').style.width = switchingWinsWidth + "px";
+    document.getElementById('switching-wins-right').style.width = (CELL_WIDTH - switchingWinsWidth) + "px";
+    document.getElementById('switching-loses-left').style.width = switchingLosesWidth + "px";
+    document.getElementById('switching-loses-right').style.width = (CELL_WIDTH - switchingLosesWidth) + "px";
+    
+    document.getElementById('game-qty').innerText = gameQty;
+    document.getElementById('win-if-switch').innerText = wouldWinIfSwitch + " - " + Math.round(wouldWinIfSwitchPercent * 100) + "%";
+    document.getElementById('lose-if-switch').innerText = wouldLoseIfSwitch + " - " + Math.round(wouldLoseIfSwitchPercent * 100) + "%";
+}
+
+function runSimulation() {
+    runGame();
+    updateUi();
+}
+</script>
+
+<body>
+<h1 style="text-align: center;">Monty Hall Simulation</h1>
+
+<div style="width: 600px; height: 1.2em; border: 1px solid black;">
+    <div style="float: left; width: 150px;">Switching Wins: </div>
+    <div id="switching-wins-left" style="float: left; background-color: green;">&nbsp;</div>
+    <div id="switching-wins-right" style="float: left;">&nbsp;</div>
+</div>
+
+<div style="width: 600px; height: 1.2em; border: 1px solid black;">
+    <div style="float: left; width: 150px;">Switching Loses: </div>
+    <div id="switching-loses-left" style="float: left; background-color: red;">&nbsp;</div>
+    <div id="switching-loses-right" style="float: left;">&nbsp;</div>
+</div>
+
+<ul style="clear: both;">
+    <li>Game qty: <span id="game-qty"></span></li>
+    <li>Would win if switch: <span id="win-if-switch"></span></li>
+    <li>Would lose if switch: <span id="lose-if-switch"></span></li>
+</ul>
+
+</body>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+   setInterval(runSimulation, 500);
+});
+</script>
+
+</html>
