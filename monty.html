@@ -19,8 +19,8 @@ var wouldLoseIfSwitch = 0;
 var gameQty = 0;
 var speed = 10;
 function runGame() {
-    var prizeDoor = Math.round(3 * Math.random());
-    var guessDoor = Math.round(3 * Math.random());
+    var prizeDoor = Math.floor(3 * Math.random());
+    var guessDoor = Math.floor(3 * Math.random());
     var firstGuessIsRight = (guessDoor === prizeDoor);
     
     if ( firstGuessIsRight ) {
@@ -37,8 +37,8 @@ function updateUi() {
     var wouldWinIfSwitchPercent = wouldWinIfSwitch / gameQty;
     var wouldLoseIfSwitchPercent = wouldLoseIfSwitch / gameQty;
     
-    var switchingWinsWidth = Math.round(CELL_WIDTH * wouldWinIfSwitchPercent);
-    var switchingLosesWidth = Math.round(CELL_WIDTH * wouldLoseIfSwitchPercent);
+    var switchingWinsWidth = Math.floor(CELL_WIDTH * wouldWinIfSwitchPercent);
+    var switchingLosesWidth = Math.floor(CELL_WIDTH * wouldLoseIfSwitchPercent);
     
     document.getElementById('switching-wins-left').style.width = switchingWinsWidth + "px";
     document.getElementById('switching-wins-right').style.width = (CELL_WIDTH - switchingWinsWidth) + "px";
@@ -46,8 +46,8 @@ function updateUi() {
     document.getElementById('switching-loses-right').style.width = (CELL_WIDTH - switchingLosesWidth) + "px";
     
     document.getElementById('game-qty').innerText = gameQty;
-    document.getElementById('win-if-switch').innerText = wouldWinIfSwitch + " - " + Math.round(wouldWinIfSwitchPercent * 100) + "%";
-    document.getElementById('lose-if-switch').innerText = wouldLoseIfSwitch + " - " + Math.round(wouldLoseIfSwitchPercent * 100) + "%";
+    document.getElementById('win-if-switch').innerText = wouldWinIfSwitch + " - " + Math.floor(wouldWinIfSwitchPercent * 100) + "%";
+    document.getElementById('lose-if-switch').innerText = wouldLoseIfSwitch + " - " + Math.floor(wouldLoseIfSwitchPercent * 100) + "%";
 }
 
 function runSimulation() {
