@@ -8,19 +8,10 @@ function runGame() {
     var guessDoor = Math.round(3 * Math.random());
     var firstGuessIsRight = (guessDoor === prizeDoor);
     
-    var willSwitch = Math.round(2 * Math.random());
     if ( firstGuessIsRight ) {
-        if ( willSwitch ) {
-            ++wouldLoseIfSwitch;
-        } else {
-            ++wouldWinIfSwitch;
-        }
+        ++wouldWinIfSwitch;
     } else {
-        if ( willSwitch ) {
-            ++wouldWinIfSwitch;
-        } else {
-            ++wouldLoseIfSwitch;
-        }
+        ++wouldLoseIfSwitch;
     }
     
     ++gameQty;
