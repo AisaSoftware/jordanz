@@ -31,6 +31,7 @@ var items = [
     new item('http://www.amazon.com/J2EE-Technology-Practice-Applications-Enterprise/dp/0201746220', 'j2ee_book.jpg', 95, 119, "J2EE Technology in Practice"),
     new item('https://www.facebook.com/jordan.zimmerman.drummer?ref=bookmarks', 'drums.jpg', 140, 165, "I'm a drummer too!"),
     new item('olivegarden.html', 'olivegarden.jpg', 151, 115, 'Olive Garden Dish Name Generator'),
+    new item('monty.html', 'monty.png', 140, 105, 'Monty Hall Problem Simulator'),
 ];
 
 var ITEMS_PER_ROW = 4;
