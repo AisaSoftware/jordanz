@@ -1,7 +1,7 @@
 <html>
 <head>
     <style>
-        #button-fast, #button-normal, #button-slow {
+        .button {
             border: 1px solid black;
             padding: 3px;
             display: inline;
@@ -61,9 +61,10 @@ function runSimulation() {
 <h1 style="text-align: center;">Monty Hall Simulation</h1>
 
 <div id="container-for-buttons">
-    <div id="button-fast">Fast</div>
-    <div id="button-normal">Normal</div>
-    <div id="button-slow">Slow</div>
+    <div id="button-super-fast" class="button">Super Fast</div>
+    <div id="button-fast" class="button">Fast</div>
+    <div id="button-normal" class="button">Normal</div>
+    <div id="button-slow" class="button">Slow</div>
 </div>
 
 <div style="width: 600px; height: 16px; border: 1px solid black;">
@@ -90,6 +91,9 @@ function runSimulation() {
 
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('button-super-fast').addEventListener('click', function(){
+        speed = 1;
+    });
     document.getElementById('button-fast').addEventListener('click', function(){
         speed = 10;
     });
