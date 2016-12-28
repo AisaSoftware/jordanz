@@ -1,8 +1,23 @@
 <html>
+<head>
+    <style>
+        #button-fast, #button-normal, #button-slow {
+            border: 1px solid black;
+            padding: 3px;
+            display: inline;
+            cursor: pointer;
+        }
+        
+        #container-for-buttons {
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
 <script type="text/javascript">
 var wouldWinIfSwitch = 0;
 var wouldLoseIfSwitch = 0;
 var gameQty = 0;
+var speed = 10;
 function runGame() {
     var prizeDoor = Math.round(3 * Math.random());
     var guessDoor = Math.round(3 * Math.random());
@@ -38,11 +53,18 @@ function updateUi() {
 function runSimulation() {
     runGame();
     updateUi();
+    setTimeout(runSimulation, speed);
 }
 </script>
 
 <body style="font-size: 14px;">
 <h1 style="text-align: center;">Monty Hall Simulation</h1>
+
+<div id="container-for-buttons">
+    <div id="button-fast">Fast</div>
+    <div id="button-normal">Normal</div>
+    <div id="button-slow">Slow</div>
+</div>
 
 <div style="width: 600px; height: 16px; border: 1px solid black;">
     <div style="float: left; width: 150px;">Switching Wins: </div>
@@ -68,7 +90,17 @@ function runSimulation() {
 
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
-   setInterval(runSimulation, 100);
+    document.getElementById('button-fast').addEventListener('click', function(){
+        speed = 10;
+    });
+    document.getElementById('button-normal').addEventListener('click', function(){
+        speed = 100;
+    });
+    document.getElementById('button-slow').addEventListener('click', function(){
+        speed = 1500;
+    });
+    
+    setTimeout(runSimulation, speed);
 });
 </script>
 
