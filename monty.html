@@ -9,9 +9,9 @@ function runGame() {
     var firstGuessIsRight = (guessDoor === prizeDoor);
     
     if ( firstGuessIsRight ) {
-        ++wouldWinIfSwitch;
-    } else {
         ++wouldLoseIfSwitch;
+    } else {
+        ++wouldWinIfSwitch;
     }
     
     ++gameQty;
