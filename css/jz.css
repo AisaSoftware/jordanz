@@ -68,3 +68,8 @@ body {
 .well strong {
     color: #4B0082;
 }
+
+.resume a {
+    color: white;
+    font-weight: bold;
+}
