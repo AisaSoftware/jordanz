@@ -82,14 +82,14 @@
 		
 		function recordBpm()
 		{
-			elapsed = Date.now() - startTicks;
-			startTicks = Date.now();
+			elapsed = performance.now() - startTicks;
+			startTicks = performance.now();
 			updateBpm();
 		}
 		
 		function startTimer()
 		{
-			startTicks = Date.now();
+			startTicks = performance.now();
 			isTiming = true;
 			document.getElementById('button').style.backgroundColor = "#F00";
 		}
