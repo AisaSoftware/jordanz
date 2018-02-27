@@ -55,6 +55,7 @@ body {
     height: 37px;
     padding-top: 5px;
     text-align: center;
+    color: white;
 }
 
 .glyphicon.glyphicon-envelope {
