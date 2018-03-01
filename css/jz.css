@@ -22,6 +22,10 @@ body {
         height: 90%;
         overflow: scroll;
     }
+
+    .resume {
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -40,6 +44,10 @@ body {
         width: 80%;
         height: 60%;
         overflow: scroll;
+    }
+
+    .resume {
+        margin-top: 30px;
     }
 }
 
@@ -89,10 +97,6 @@ body {
 
 .well strong {
     color: #4B0082;
-}
-
-.resume {
-    margin-top: 50px;
 }
 
 .resume a {
