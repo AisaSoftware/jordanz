@@ -10,7 +10,8 @@ function item(url, image, imageWidth, imageHeight, alt, special) {
 var items = [
     new item('https://www.facebook.com/jordan.zimmerman', 'FB-f-Logo__blue_144.png', 144, 144, 'Facebook'),
     new item('https://www.linkedin.com/in/jordanzimmerman', 'Logo-2C-41px-TM.png', 170, 41, 'LinkedIn'),
-    new item('https://github.com/randgalt', 'GitHub_Logo.png', 160, 66, 'GitHub'),
+    new item('https://github.com/randgalt', 'GitHub_Logo.png', 160, 66, 'GitHub'),    
+    new item('https://gitter.im/Randgalt', 'gitter-logo.png', 120, 120, 'Gitter Chat'),
     new item('http://www.slideshare.net/randgalt', 'SS_Logo_Desktop_Black.png', 128, 34, 'Slideshare'),
     new item('https://www.facebook.com/ritahkan', 'rita.png', 101, 136, 'Rita Kan'),
     new item('https://soundcloud.com/jordanzimmerman', 'sc_st_gradient_152x96.png', 152, 96, 'SoundCloud'),
