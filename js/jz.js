@@ -76,6 +76,10 @@ function setBio() {
 }
 
 $(function(){
+    document.body.ontouchmove = function(event){
+        event.preventDefault();
+    }
+    
     buildItems();
     setBio();
 
