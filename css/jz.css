@@ -5,50 +5,41 @@ body {
     width: 100%;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1000px) {
     #jzpic-container {
-        position: fixed;
-        left: 15px;
-        top: 15px;
-        width: 100px;
-        height: 136px;
+        display: block;
     }
-
-    #jzpage {
-        position: fixed;
-        top: 5%;
-        left: 10%;
-        width: 80%;
-        height: 90%;
-        overflow: scroll;
-    }
-
-    .resume {
-        margin-top: 50px;
+    
+    #jzpic-narrow-container {
+        display: none;
     }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
     #jzpic-container {
-        position: fixed;
-        top: 5%;
-        left: 10%;
-        width: 80%;
-        height: 136px;
+        display: none;
     }
+    
+    #jzpic-narrow-container {
+        display: block;
+    }
+}
 
-    #jzpage {
-        position: fixed;
-        top: 35%;
-        left: 10%;
-        width: 80%;
-        height: 60%;
-        overflow: scroll;
-    }
+#jzpic-container {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: 100px;
+    height: 136px;
+}
 
-    .resume {
-        margin-top: 5px;
-    }
+#jzpage {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 90%;
+    overflow: scroll;
 }
 
 .jzthumb {
@@ -72,7 +63,7 @@ body {
     margin-top: 35px;
 }
 
-#jzpic {
+.jzpic {
     border: solid 1px #333333;
     box-shadow: 2px 2px 5px #333333;
 }
@@ -97,6 +88,15 @@ body {
 
 .well strong {
     color: #4B0082;
+}
+
+#jzpic-container .resume {
+    margin-top: 50px;
+}
+
+#jzpic-narrow-container .resume {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .resume a {
