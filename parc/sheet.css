@@ -1,14 +1,6 @@
 
-body
-{
-	font-family: verdana, arial, sans-serif; 
-	background-color: #888;
-	overflow: hidden;
-}
-
 .whiteout,.results
 {
-	border: solid #000 1px;
 	background-color: #FFF;
 	margin: 5px 10px 5px 10px;
 	padding: 10px 10px 10px 10px;
@@ -45,11 +37,9 @@ body
 
 .tc
 {
-	overflow: auto;
 	border: solid #000 1px;
 	margin: 5px 10px 5px 10px;
 	padding: 5px 5px 5px 5px;
-	height: 10%;
 }
 
 input,select,.form
@@ -62,12 +52,6 @@ input,select,.form
 	font-style: italic;
 	font-weight: bold;
 	margin-right: 20px;
-}
-
-.results
-{
-	overflow: auto;
-	height: 85%;
 }
 
 .ref
