@@ -17,7 +17,7 @@ var items = [
     new item('http://aisallc.com', 'aisascaled.png', 165, 147, 'Aisa Software'),
     new item(null, null, 0, 0, 'Email', 'email'),
     new item('http://curator.apache.org', 'curator.png', 150, 56, 'Apache Curator'),
-    new item('http://nirmataoss.github.io/workflow', 'nirmata.jpg', 100, 100, 'Nirmata Workflow'),
+    new item('http://nirmata.github.io/workflow', 'nirmata.jpg', 100, 100, 'Nirmata Workflow'),
     new item('http://stackoverflow.com/users/2048051/randgalt', 'stackoverflow.png', 158, 158, 'Stack Overflow'),
     new item('https://rule1.quora.com', 'Quora-rule1.png', 170, 113, 'Quora - Rule 1'),
     new item('https://aisa.quora.com', 'Quora-aisa.png', 170, 113, 'Quora - A is A'),
