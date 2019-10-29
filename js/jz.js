@@ -27,6 +27,7 @@ var items = [
     new item('https://www.youtube.com/watch?v=wqZ0f1piiHg', 'pb.gif', 128, 128, "My very first successful program, MacPork Barrel from 1988"),
     new item('https://www.elastic.co/blog/zookeeper-backup-a-treatise', 'elastic.png', 125, 134, "ZooKeeper Backup - A Treatise"),
     new item('http://www.amazon.com/J2EE-Technology-Practice-Applications-Enterprise/dp/0201746220', 'j2ee_book.jpg', 95, 119, "J2EE Technology in Practice"),
+    new item('http://preserve.mactech.com/articles/mactech/Vol.07/07.09/Memman/index.html', 'mactech.png', 204, 71, 'Article from a very long time ago'),
     new item('https://www.facebook.com/jordan.zimmerman.drummer?ref=bookmarks', 'drums.jpg', 140, 165, "I'm a drummer too!"),
     new item('olivegarden.html', 'olivegarden.jpg', 151, 115, 'Olive Garden Dish Name Generator'),
     new item('monty.html', 'monty.png', 140, 105, 'Monty Hall Problem Simulator'),
