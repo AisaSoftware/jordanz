@@ -1,5 +1,5 @@
 body {
-    background-image: url("../assets/brown.jpg");
+    background-image: url("../assets/blue-red.jpg");
     position: fixed;
     overflow: hidden;
     width: 100%;
@@ -76,6 +76,7 @@ body {
     height: 37px;
     padding-top: 5px;
     text-align: center;
+    text-shadow: 1px 1px 1px black; 
     color: white;
 }
 
@@ -102,6 +103,7 @@ body {
 
 .resume a {
     color: white;
+    text-shadow: 1px 1px 1px black; 
     font-weight: bold;
     font-size: 110%;
 }
