@@ -34,14 +34,19 @@ var items = [
 ];
 
 var backgrounds = [
-    '/assets/backgrounds/blue-red.jpg',
-    '/assets/backgrounds/pastel.jpg',
-    '/assets/backgrounds/blue-yellow.jpg',
-    '/assets/backgrounds/brown.jpg',
-    '/assets/backgrounds/spotted.jpg',
-    '/assets/backgrounds/blue-drops.jpg',
+    '/assets/backgrounds/basketball.jpg',
+    '/assets/backgrounds/green-grass.jpg',
+    '/assets/backgrounds/sky.jpg',
+    '/assets/backgrounds/glass.jpg',
     '/assets/backgrounds/warm.jpg',
-    '/assets/backgrounds/green-fan.jpg'
+    '/assets/backgrounds/blue-drops.jpg',
+    '/assets/backgrounds/spotted.jpg',
+    '/assets/backgrounds/pastel.jpg',
+    '/assets/backgrounds/green-fan.jpg',
+    '/assets/backgrounds/blue-yellow.jpg',
+    '/assets/backgrounds/blue-red.jpg',
+    '/assets/backgrounds/brown.jpg',
+    '/assets/backgrounds/yellow-purple-black.jpg'
 ]
 
 var ITEMS_PER_ROW = 4;
