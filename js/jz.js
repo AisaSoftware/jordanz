@@ -33,6 +33,17 @@ var items = [
     new item('monty.html', 'monty.png', 140, 105, 'Monty Hall Problem Simulator'),
 ];
 
+var backgrounds = [
+    '/assets/backgrounds/blue-red.jpg',
+    '/assets/backgrounds/pastel.jpg',
+    '/assets/backgrounds/blue-yellow.jpg',
+    '/assets/backgrounds/brown.jpg',
+    '/assets/backgrounds/spotted.jpg',
+    '/assets/backgrounds/blue-drops.jpg',
+    '/assets/backgrounds/warm.jpg',
+    '/assets/backgrounds/green-fan.jpg'
+]
+
 var ITEMS_PER_ROW = 4;
 var ROW_CLASS = 'col-md-' + (12 / ITEMS_PER_ROW);
 
@@ -75,9 +86,19 @@ function setBio() {
     })
 }
 
+function rand(from, to) {
+    return Math.round(to * Math.random()) + from;
+}
+
+function setBackground() {
+    var image = backgrounds[rand(0, backgrounds.length - 1)];
+    document.body.style.background = 'url(' + image + ')';
+}
+
 $(function(){
     buildItems();
     setBio();
+    setBackground();
 
     var m2 = 'mail';
     $('#copyright').text(new Date().getFullYear());
