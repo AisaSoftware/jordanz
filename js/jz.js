@@ -31,6 +31,7 @@ var items = [
     new item('https://www.facebook.com/jordan.zimmerman.drummer?ref=bookmarks', 'drums.jpg', 140, 165, "I'm a drummer too!"),
     new item('olivegarden.html', 'olivegarden.jpg', 151, 115, 'Olive Garden Dish Name Generator'),
     new item('monty.html', 'monty.png', 140, 105, 'Monty Hall Problem Simulator'),
+    new item('https://www.youtube.com/playlist?list=PLiG8iNE7zTlaml2ei3XK76z6Q1iLQoumT', 'aisajazz.png', 494, 296, 'Aisa Jazz Group')
 ];
 
 var backgrounds = [
