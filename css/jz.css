@@ -5,7 +5,7 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1375px) {
     #jzpic-container {
         display: block;
     }
@@ -15,7 +15,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1375px) {
     #jzpic-container {
         display: none;
     }
@@ -29,8 +29,8 @@ body {
     position: fixed;
     left: 15px;
     top: 15px;
-    width: 100px;
-    height: 136px;
+    width: 140px;
+    height: 220px;
 }
 
 #jzpage {
