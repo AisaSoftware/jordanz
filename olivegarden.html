@@ -145,27 +145,29 @@ function count(a) {
     return a.length;
 }
 
-var fakeFood = '';
-if ( rand(0, 5) == 0 )
-{
-    fakeFood = fakeFood + adjectives[rand(0, count(adjectives) - 1)] + " ";
-}
+function nextFakeFood() {
+    var fakeFood = '';
+    if ( rand(0, 5) == 0 )
+    {
+        fakeFood = fakeFood + adjectives[rand(0, count(adjectives) - 1)] + " ";
+    }
 
-if ( rand(0, 4) == 0 )
-{
-    fakeFood = fakeFood + bsPastaPrefixes[rand(0, count(bsPastaPrefixes) - 1)] + bsPastaSuffixes[rand(0, count(bsPastaSuffixes) - 1)] + " ";
-}
-else
-{
-    fakeFood = fakeFood + mains[rand(0, count(mains) - 1)] + " ";
-}
-fakeFood = fakeFood + suffixes[rand(0, count(suffixes) - 1)] + " ";
-fakeFood = fakeFood + bsPrefixes[rand(0, count(bsPrefixes) - 1)] + bsSuffixes[rand(0, count(bsSuffixes) - 1)];
+    if ( rand(0, 4) == 0 )
+    {
+        fakeFood = fakeFood + bsPastaPrefixes[rand(0, count(bsPastaPrefixes) - 1)] + bsPastaSuffixes[rand(0, count(bsPastaSuffixes) - 1)] + " ";
+    }
+    else
+    {
+        fakeFood = fakeFood + mains[rand(0, count(mains) - 1)] + " ";
+    }
+    fakeFood = fakeFood + suffixes[rand(0, count(suffixes) - 1)] + " ";
+    fakeFood = fakeFood + bsPrefixes[rand(0, count(bsPrefixes) - 1)] + bsSuffixes[rand(0, count(bsSuffixes) - 1)];
 
-$(function(){
-    $('#meal').text(fakeFood);
-});
-
+    $(function(){
+        $('#meal').text(fakeFood);
+    });
+}
+nextFakeFood();
 </script>
 
 <body>
@@ -181,7 +183,7 @@ Of course, with unlimited salad and breadsticks.
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div>
-<span class="button" onClick="window.location.href=window.location.href">Try Another</span>
+<span class="button" onClick="nextFakeFood();">Try Another</span>
 </div>
 
 <p>&nbsp;</p>
