@@ -8,7 +8,7 @@ function item(url, image, imageWidth, imageHeight, alt, special) {
 }
 
 var items = [
-    new item('https://www.facebook.com/jordan.zimmerman', 'FB-f-Logo__blue_144.png', 144, 144, 'Facebook'),
+    new item('https://www.jordanzimmerman.com/fifty-years-of-semicolons.html', 'semicolon.png', 144, 144, 'Fifty Years of Semicolons'),
     new item('https://www.linkedin.com/in/jordanzimmerman', 'Logo-2C-41px-TM.png', 170, 41, 'LinkedIn'),
     new item('https://github.com/randgalt', 'GitHub_Logo.png', 160, 66, 'GitHub'),    
     new item('http://www.slideshare.net/randgalt', 'SS_Logo_Desktop_Black.png', 128, 34, 'Slideshare'),

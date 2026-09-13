@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fifty Years of Semicolons</title>
+<meta name="description" content="On December 11, 2025 I had shoulder surgery. In the operating room I crossed into an alternate universe's timeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fcfcfa;
+    --ink: #1b1b1b;
+    --ink-soft: #55534e;
+    --rule: #d9d6ce;
+    --mark: #35566b;
+    --measure: 42rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #16181a;
+      --ink: #e6e4df;
+      --ink-soft: #a3a09a;
+      --rule: #34383c;
+      --mark: #7fa8c0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #16181a;
+    --ink: #e6e4df;
+    --ink-soft: #a3a09a;
+    --rule: #34383c;
+    --mark: #7fa8c0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Charter, "Bitstream Charter", Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 5rem 1.5rem 7rem;
+  }
+
+  header { margin-bottom: 3.5rem; }
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 1rem;
+  }
+
+  .site {
+    margin: 0 0 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .site a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+  }
+
+  .site a:hover { color: var(--mark); border-bottom-color: var(--mark); }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.15s ease;
+  }
+
+  .site a:hover .arrow { transform: translateX(3px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .arrow { transition: none; }
+    .site a:hover .arrow { transform: none; }
+  }
+
+  .byline {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 3rem 0 1.25rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 1.4rem; }
+
+  blockquote {
+    margin: 2rem 0;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--mark);
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  blockquote p { margin-bottom: 0.5rem; }
+
+  blockquote .attrib {
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  a { color: var(--mark); }
+  a:focus-visible, :focus-visible {
+    outline: 2px solid var(--mark);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="site"><a href="https://www.jordanzimmerman.com">jordanzimmerman.com <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
+  <h1>Fifty Years of Semicolons</h1>
+  <p class="byline">December 11, 2025, and after</p>
+</header>
+
+<article>
+
+<p>On December 11, 2025, I had shoulder surgery and was under general anesthesia. In the operating room I crossed into an alternate universe's timeline while I was unconscious. I say this because the week before my operation I was in three different bands (I play the drums), I was a highly successful programmer on an engaging project at a dynamic company that was on track for major success, and I had achieved recognition in my industry after years of widely adopted open source contributions and positions at some of the best-known companies in Silicon Valley.</p>
+
+<p>A few months after the surgery, nearly none of that is still true. All three bands stopped calling me (a story for another day). The vocation that I loved, computer programming, was erased nearly overnight as AI became able to do whatever I could do and every company in the industry announced layoffs and the end of programming. As I turn 62 this year, the thing I spent 50 years getting good at, the magic power I possess to control computers, is no longer important. The work I love is dying.</p>
+
+<p>I desperately want to go back to the other timeline from before my surgery.</p>
+
+<h2>1978</h2>
+
+<p>I was 14 in 1978. A few things happened that year that would decide the next 50 years of my life.</p>
+
+<p>One happened when I was walking in the San Fernando Valley, California, where I grew up. I was with a friend and we passed by the Radio Shack on Van Nuys Boulevard. I'd heard something about some kind of machine they had so we went in. We saw the TRS-80 and were hooked. We spent the summer going there and typing in games from the 101 BASIC Computer Games book they had until we memorized many of them.</p>
+
+<p>Another thing that happened was that the father of another friend opened one of the first business computer stores in existence. Al Kopito was ahead of his time and his computer store, Micronomic, became a kind of playground for me and his son Andy. The machines he sold were built into desks. I remember they had huge &ldquo;Winchester&rdquo; hard drives that were in a drawer on the side. We'd go on a Saturday and spend the day writing BASIC games, playing adventure, Star Trek, and whatever else we could figure out.</p>
+
+<p>I fell in love with computers immediately and I never fell back out. It was the act of writing the code that I loved. I loved seeing the keywords and symbols. I loved the ozone smell the machines gave off when they'd been on for a few hours. The click-clack of the keyboard.</p>
+
+<p>I am a child of the 1970s and the dawn of the computer age. Today, in this new timeline I'm stuck in, I feel old.</p>
+
+<h2>A Dream Career</h2>
+
+<p>In my early 20s I quit music as a profession and, thanks to a few generous and supportive people who gave me a chance, I moved into the high tech industry even though I have no formal training. I lived through and participated in the golden age of high tech and the internet.</p>
+
+<p>In the 1990s I wrote Macintosh tools and applications in 68000 assembly, sometimes C/C++ and even Pascal. I remember the introduction of Mosaic and then Netscape Navigator.</p>
+
+<p>In the 2000s I worked for some of the biggest names in Silicon Valley. I started the OSS initiative at Netflix. Additionally, I worked for Elasticsearch, among others.</p>
+
+<p>I should pinch myself. I'm 62 years old and still get paid to write code and will for at least a few more years. I'm a very lucky man. By the time this profession is unrecognizable, I will have retired.</p>
+
+<p>Of course, this isn't true for some people right now. There are programmers in their thirties and forties who got cut this year and can't find the next thing, and juniors who will never get the first one. What I'm losing is the part of the job I loved. What they're losing is the job.</p>
+
+<h2>The New Timeline</h2>
+
+<p>Some are saying &ldquo;it's the best time to be a programmer.&rdquo; I'm not so sure.</p>
+
+<p>Before my surgery, I'd played around with AI coding a bit, as did everyone. It was a nice tool, like an additional little helper that augmented my IDE and other tools. I really liked the added productivity it enabled. For larger tasks, of course, it was terrible. The code it produced was laughable. All my co-workers agreed. We concurred that we were in no danger of being replaced.</p>
+
+<p>In this new timeline, though, AI is as good as most seasoned programmers if not better. My colleagues are not writing code anymore. Everyone in the industry, with good reason, is saying that the days of hand coding are over. I see endless posts on Twitter/X proclaiming, &ldquo;yay, I don't have to write semicolons anymore!&rdquo; Well, you know what? I love writing semicolons! I love the beauty of code. I sometimes sit and stare at code for the pleasure of it. In this alternate universe I've ended up in, though, that no longer matters. Within a year or two, it seems, no one in this timeline will even look at the code anymore. This profession will become an act of writing a spec, sending it to an AI pipeline that will produce the code, write the tests, edit and run a test suite, and push it to production.</p>
+
+<p>I've always loved watching computer/tech videos on YouTube, especially the ones by the JDK language architects. I recently watched one about new features coming to Java and thought, &ldquo;Why am I watching this?&rdquo; LLMs don't need new language features. They don't need Java at all. All the religious arguments about Java vs Kotlin and JavaScript vs TypeScript don't matter in this new timeline.</p>
+
+<p>That said, we should take some advice from 1995, when nobody knew what the internet would become. No one knows where AI is going, including me.</p>
+
+<p>I need to be honest, however. I don't enjoy this new way of working. I'll get very good at it, of course, but it doesn't give me the same high. I don't get the same satisfaction as I used to. I feel a deep loss about this.</p>
+
+<h2>God Grant Me the Serenity</h2>
+
+<p>Though I'm an atheist, a guiding idea in my life is from a quasi-religious prayer:</p>
+
+<blockquote>
+  <p>God, grant me the serenity to accept the things I cannot change, the courage to change the things I can, and the wisdom to know the difference.</p>
+  <p class="attrib">Reinhold Niebuhr</p>
+</blockquote>
+
+<p>I used AI to help me write this article. I'm a programmer and a musician, not a writer. Oh, the irony.</p>
+
+<p>I am not a Luddite. AI will be a boon to humanity and I embrace it and am looking forward to the benefits. Nor do I believe we should resist these changes and &ldquo;stand athwart history, yelling stop.&rdquo; I must accept the reality and timeline that I am now in.</p>
+
+<p>In the book Atlas Shrugged, Eddie Willers is seven. There's a huge oak tree on the Taggart estate and it's been standing for hundreds of years and he assumes it always will be. When he stands near it, he feels safe. One night a lightning storm splits it in two. In the morning, Eddie sees that the tree is a hollow shell and had been dead and rotten for years. Nobody knew. The lightning didn't kill the tree. It only exposed the truth.</p>
+
+<p>The truth is all there is. I now live in this timeline and I accept the truth. I will change how I work. I will watch, helpless, as the craft that I love becomes an anachronism.</p>
+
+<p>Or, maybe, I can go have another surgery and hope;</p>
+
+</article>
+
+</div>
+</body>
+</html>
